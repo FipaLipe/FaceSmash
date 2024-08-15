@@ -28,6 +28,7 @@ body {
 
 .main h1 {
     width: 100%;
+    margin-bottom: 2rem;
     font-size: 2rem;
     text-align: center;
 }
@@ -51,5 +52,6 @@ body {
 }
 
 .pessoa img:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
+    cursor: pointer;
 }
