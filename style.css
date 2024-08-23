@@ -44,7 +44,7 @@ body {
     border-color: #1c26b1;
     border-width: 2px;
 
-    width: 20rem;
+    object-fit: cover;
 
     transition-property: transform;
     transition-duration: 0.2s;
