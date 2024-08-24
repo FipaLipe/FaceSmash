@@ -26,15 +26,20 @@ document.querySelectorAll(".pessoa").forEach((p) => {
 });
 
 async function atualizaFoto(id) {
+    img = document.getElementById(id);
+    img.style.filter = 'grayscale(100%)';
     rm = await randomRM();
 
     existe = await esseManoExiste(linkDaFoto(rm))
 
     if (existe) {
-        img = document.getElementById(id);
         //console.log(`foi pro mano ${rm}`)
         img.src = linkDaFoto(rm);
         RMs[id] = rm;
+        img.style.filter = 'none';
+        img.style.width = '20rem'; 
+        img.style.height = '30rem'; 
+        img.style.objectFit = 'cover';
     } else {
         //console.log(`foi não pro mano ${rm}`)
         atualizaFoto(id)
