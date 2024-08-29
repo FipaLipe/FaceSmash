@@ -1,0 +1,15 @@
+{
+  "name": "facemash",
+  "version": "1.0.0",
+  "description": "Esse projeto é uma tentativa de réplica do site Facemash criado pelo Mark Zuckerberg antes do Facebook.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
