@@ -12,14 +12,14 @@ async function start() {
 
 
 document.querySelectorAll(".pessoa").forEach((p) => {
-    p.addEventListener('click', (e) => {
+    p.addEventListener('click', async (e) => {
         pessoa = e.target;
         switch(pessoa.id){
             case '1':
-                atualizaFoto("2");
+                await atualizaFoto("2");
                 break;
             case '2':
-                atualizaFoto("1");
+                await atualizaFoto("1");
                 break;
         }
     });
@@ -37,8 +37,8 @@ async function atualizaFoto(id) {
         img.src = linkDaFoto(rm);
         RMs[id] = rm;
         img.style.filter = 'none';
-        img.style.width = '20rem'; 
-        img.style.height = '30rem'; 
+        img.style.width = '15rem'; 
+        img.style.height = '20rem'; 
         img.style.objectFit = 'cover';
     } else {
         //console.log(`foi não pro mano ${rm}`)
@@ -66,10 +66,6 @@ function esseManoExiste(url, callback) {
     });
 }
 
-
-
-
-
-
-
-start();
+document.addEventListener("DOMContentLoaded", (e) => {
+    start();
+})
