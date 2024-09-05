@@ -1,13 +1,18 @@
 <?php
 
+require '../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
+
 try {
-    $pdo = new PDO("mysql:dbname=".getenv("MYSQL_DATABASE").";host=".getenv("MYSQL_HOST"),getenv("MYSQL_USER"),getenv("MYSQL_PASSWORD"));
+    $pdo = new PDO("mysql:dbname=".$_ENV["MYSQL_DATABASE"].";host=".$_ENV["MYSQL_HOST"],$_ENV["MYSQL_USER"],$_ENV["MYSQL_PASSWORD"]);
 }
 catch (PDOException $e) {
-    echo "Erro no banco: " . $e->get_message();
+    echo "Erro no banco: " . $e->getMessage();
 }
 catch (Exception $e) {
-    echo "Erro: " . $e->get_message();
+    echo "Erro: " . $e->getMessage();
 }
 
 ?>
