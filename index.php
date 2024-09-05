@@ -1,3 +1,10 @@
+<?php
+
+require "utilities/conexao.php";
+require "utilities/get_img.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,19 +19,25 @@
     </div>
     <div class="main">
         <h1>Clique para escolher um</h1>
-
+        <?php
+            try {
+                $aluno1 = get_img($conn, "000000");
+                $aluno2 = get_img($conn, $aluno1["rm"]);
+            }
+            catch (Exception $e) {
+                echo "Erro: " . $e;
+            }
+        ?>
         <div class="escolhas">
             <div class="pessoa">
-                <img id="1" src="https://professor.colegiopolitec.com.br/img/aluno/">
+                <img id="1" src="<?php echo $aluno1["img"]; ?>">
             </div>
             <h2>or</h2>
             <div class="pessoa" id="pessoa2">
-                <img id="2" src="https://professor.colegiopolitec.com.br/img/aluno/">
+                <img id="2" src="<?php echo $aluno2["img"]; ?>">
             </div>  
         </div>
 
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
