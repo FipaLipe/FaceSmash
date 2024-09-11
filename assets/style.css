@@ -1,0 +1,148 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; 
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    background-color: #1c26b1;
+
+    display: flex;
+    justify-content: center;
+}
+
+.header h1 {
+    color: #FFF;
+    font-size: 2rem;
+}
+
+
+footer {
+    width: 100%;
+    background-color: #000770;
+
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 20px;
+    bottom: 0;
+
+    margin-top: auto;
+    color: #FFF;
+}
+
+footer a {
+    color: #FFF;
+}
+
+.main {
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main h1 {
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.escolhas {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.pessoa img {
+    border-style: solid;
+    border-color: #1c26b1;
+    border-width: 2px;
+
+    width: 15rem;
+    height: 20rem;
+    object-fit: cover;
+
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.pessoa img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.alunos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.aluno-card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000770;
+
+    width: 12rem;
+    height: 16rem;
+    object-fit: cover;
+}
+
+.aluno-card:hover {
+    cursor: pointer;
+}
+
+.aluno-card .rank {
+    position: relative;
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, -100%);
+
+
+    width: 4rem;
+    height: 4rem;
+    border-radius: 60% 0 0 0 ;
+    background-color: #000770;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Verdana;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+@media (max-width: 40em) {
+    .header h1 {
+        font-size: 1,5rem;
+    }
+
+    .aluno-card {
+        width: 8rem;
+        height: 12rem;
+        border-width: 3px;
+    }
+}
