@@ -61,6 +61,11 @@ footer a {
     text-align: center;
 }
 
+.main .text {
+    width: 30%;
+    margin: 5px
+}
+
 .escolhas {
     display: flex;
     align-items: center;
@@ -144,5 +149,9 @@ footer a {
         width: 8rem;
         height: 12rem;
         border-width: 3px;
+    }
+
+    .main .text {
+        width: 100%;
     }
 }

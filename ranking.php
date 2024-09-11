@@ -38,7 +38,7 @@ $limit = isset($_GET['l']) ? $limit = $_GET['l'] : $limit = 10;
 
     
     <footer>
-        <a href="/">Voltar à HOME</a>
+        <a href="/">Voltar à HOME</a>|<a href="/remove">  Desejo remover minha foto</a>
     </footer>
 </body>
 </html>
